@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Days+One&family=Do+Hyeon&family=Grandstander:wght@600&display=swap');
+
+
+.main-container {
+    text-align: center;
+    background-color: rgba(37, 37, 37, 0.562);
+    width: 1050px;
+    height: 415px;
+    position: absolute;
+    left: 170px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 110px;
+}
+.btn-back {
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-top: 8px;
+    top: 120px;
+    left: 180px;
+}
+.cont-2, .cont-3, .cont-4 {
+    display: inline-block;
+    /* border: 2px solid white; */
+    width: 300px;
+    height: 200px;
+    position: absolute;
+}
+.cont-2{
+    left: 30px;
+}
+.cont-3 {
+    width: 410px;
+    left: 320px;
+}
+.cont-4 {
+    right: 30px;
+    padding-top: 30px;
+}
+.main-cont-btm {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 205px;
+}
+.cont-5, .cont-6, .cont-7, .cont-8 {
+    padding-top: 10px;
+    display: inline-block;
+    /* border: 2px solid white; */
+    width: 200px;
+    height: 200px;
+}
+.wi {
+    color: white;
+}
+.main-temp {
+    font-family: 'Days One', sans-serif;
+    margin-top: 40px;
+    font-size: 85px;
+}
+.city-title {
+    font-family: 'Days One', sans-serif;
+    margin-top: 25px;
+    font-size: 50px;
+}
+.btm-indicator {
+    font-size: 50px;
+    margin-top: 30px;
+}
+.w-desc {
+    font-size: 23px;
+    margin-top: 23px;
+}

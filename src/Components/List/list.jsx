@@ -23,25 +23,6 @@ const List = (props) => {
         )
     })
 
-    // const map = [
-    //     {
-    //         nama: "bryan",
-    //         umur: 12
-    //     }, {
-    //         nama: "alex",
-    //         umur:30
-    //     }, {
-    //         nama: "johan",
-    //         umur: 15
-    //     }
-    // ]
-
-    // const newData = data.find((data, index) => {
-    //      return index === 0
-    // })
-    
-    // const newData = data[0]
-    // console.log(map[1].umur)
     const newTemp = Math.floor(data.temp - 273.15)
 
 
