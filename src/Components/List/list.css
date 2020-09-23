@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Days+One&family=Do+Hyeon&family=Grandstander:wght@600&display=swap');
+
+
+* {
+    /* border: 1px solid black */
+}
+.cont-main, .cont-table {
+    text-align: center;
+   height: 370px;
+}
+.cont-parent {
+    background-color: rgba(0, 0, 0, 0.719);
+    color: white;
+    border-radius: 20px;
+}
+.cont-table {
+    overflow: auto;
+}
+.cont-table::-webkit-scrollbar {
+    width: 20px;
+}
+.table {
+    background-color: transparent
+}
+.city-name {
+    font-size: 70px;
+    font-family: 'Days One', sans-serif;
+    margin-top: 35px;
+}
+.temp {
+    display: inline-block;
+    font-family: 'Days One', sans-serif;
+    font-size: 100px;
+}
+.desc {
+    font-size: 45px;
+}
