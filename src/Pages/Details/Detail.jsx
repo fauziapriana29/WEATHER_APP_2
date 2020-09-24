@@ -2,14 +2,22 @@ import React, { useState, useEffect } from 'react'
 import { Link, useHistory, useParams } from 'react-router-dom'
 import './Detail.css'
 import axios from 'axios'
+import Summer from '../../Components/vid-background/summer.mp4'
+import Rain from '../../Components/vid-background/rain.mp4'
+import Snow from '../../Components/vid-background/snow.mov'
+import Fog from '../../Components/vid-background/fog.mp4'
+import Spinner from '../../Components/Spinner/Spinner.jsx'
+
 
 const Detail = () => {
     const history = useHistory()
-    const [data, setData] = useState({})
+  const [data, setData] = useState({})
+  const [loading, setLoading] = useState(true)
     const { id } = useParams()
     // console.log(id)
     
-    const detailWeaters = async () => {
+  const detailWeaters = async () => {
+      setLoading(true)
         console.log(id)
         await axios.get(`http://api.openweathermap.org/data/2.5/group?id=${id}&appid=284d0c8d3f216bf0622500d1663147e7`).then((response) => {
             const data = response.data.list[0]
@@ -25,6 +33,7 @@ const Detail = () => {
                 lon: data.coord.lon,
                 lan: data.coord.lat
             })
+          setLoading(false)
         })
     }
 
@@ -73,13 +82,18 @@ const Detail = () => {
             return data.wind_deg + 180
         }
     }
+  
+    const vidBack = () => {
+      const id = data.icon_id
+      if (id >= 200 && id <= 531) { return(<video className="video" src={Rain} type="video/mov" autoPlay loop muted></video>) }
+      else if (id >= 600 && id <= 622) { return(<video className="video" src={Snow} type="video/mov" autoPlay loop muted></video>) }
+      else if (id >= 701 && id <= 781) { return(<video className="video" src={Fog} type="video/mov" autoPlay loop muted></video>) }
+      else if (id >= 800 && id <= 811){ return(<video className="video" src={Summer} type="video/mov" autoPlay loop muted></video>)}
+  }
 
 
-    useEffect(() => {
-        detailWeaters()
-    }, [id])
-    return (
-        <div>
+  const setDisplay = !!loading ? <Spinner /> : <div>
+    {vidBack()}
                 <Link className="btn btn-outline-warning btn-back" onClick={back}><i class="fas fa-arrow-left fa-2x"></i></Link>
             <div className="main-container">
                 <div className="cont-2"><h1 className="main-temp">{temp}&deg;</h1></div>
@@ -103,6 +117,14 @@ const Detail = () => {
                     </div>
                 </div>  
             </div>
+  </div>
+
+    useEffect(() => {
+        detailWeaters()
+    }, [id])
+    return (
+        <div style={{textAlign: "center"}}>
+            {setDisplay}
         </div>
     )
 }

@@ -5,6 +5,9 @@
 * {
     /* border: 1px solid black */
 }
+body {
+    background-color: rgb(68, 65, 65);
+}
 .cont-main, .cont-table {
     text-align: center;
    height: 370px;
@@ -13,12 +16,6 @@
     background-color: rgba(0, 0, 0, 0.719);
     color: white;
     border-radius: 20px;
-}
-.cont-table {
-    overflow: auto;
-}
-.cont-table::-webkit-scrollbar {
-    width: 20px;
 }
 .table {
     background-color: transparent
@@ -35,4 +32,28 @@
 }
 .desc {
     font-size: 45px;
+}
+.list {
+    font-size: 20px;
+}
+.list-city {
+    text-align: left;
+    text-indent: 10px;
+}
+.th-city {
+    width: 275px;
+}
+.th-head {
+    font-size: 22px;
+    padding: 5px auto;
+    position: fixed;
+}
+.tbody {
+    position: absolute;
+    top: 60px;
+    overflow: auto;
+    height: 310px;
+}
+.tbody::-webkit-scrollbar {
+    width: 10px;
 }
