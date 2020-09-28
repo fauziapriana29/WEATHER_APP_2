@@ -18,7 +18,7 @@ const List = (props) => {
                 <th>{index + 1}</th>
                 <td className="list-city">{data.name}</td>
                 <td>{data.weather[0].description}</td>
-                <td><i className={`wi ${icons} display-5`}/></td>
+                <td className="th-icons"><i className={`wi ${icons} display-5`}/></td>
             </tr>
         )
     })
@@ -27,16 +27,15 @@ const List = (props) => {
 
 
     return (
-        <div className="container cont-parent">
-            <div className="row">
-                <div className="col col-5 cont-main">
+        <div className="cont-parent">
+            <div className="row cont-row">
+                <div className="cont-main">
                     <h1 className="city-name">{data.city}</h1>
                     <h3 className="temp">{newTemp}&deg;</h3>
                     <i className={`wi ${icons} display-1`} />
                     <h3 className="desc">{data.desc}</h3>
-                    
                 </div>
-                <div className="col col-7 cont-table">
+                <div className="cont-table">
                     <table className="table table-dark">
                         <thead className="table-head">
                             <tr className="th-head">

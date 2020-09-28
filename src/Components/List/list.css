@@ -12,10 +12,18 @@ body {
     text-align: center;
    height: 370px;
 }
+.cont-main {
+    width: 35vw;
+}
+.cont-table {
+    position: relative;
+}
 .cont-parent {
     background-color: rgba(0, 0, 0, 0.719);
     color: white;
     border-radius: 20px;
+    width: 81vw;
+    margin: auto;
 }
 .table {
     background-color: transparent
@@ -53,7 +61,34 @@ body {
     top: 60px;
     overflow: auto;
     height: 310px;
+    width: 45vw;
 }
 .tbody::-webkit-scrollbar {
     width: 10px;
+}
+.th-icons {
+    width: 8vw;
+}
+
+@media screen and (max-width:480px) {
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .cont-main {
+        width: 100%;
+    }
+    .tbody {
+        width: 100%;
+        padding: 5px;
+    }
+    .th-head {
+        visibility: hidden;
+    }
+    .list {
+        font-size: 15px;
+    }
+
 }

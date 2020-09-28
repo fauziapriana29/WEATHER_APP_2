@@ -8,3 +8,13 @@
     object-fit: cover;
     transform: translate(-50%, -50%);
   }
+
+  @media screen and (max-width: 480px) {
+
+    .video{
+      height: fit-content;
+      transform: translate(-50%, -56%);
+      height: 325vw;
+    }
+
+  }
