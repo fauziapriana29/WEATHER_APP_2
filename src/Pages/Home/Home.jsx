@@ -37,6 +37,7 @@ const Home = () => {
                             icon_id: data[0].weather[0].id
 
                         })
+                        
                         setFirstLoad(false)
                         setLoading(false)
                 })
@@ -64,6 +65,8 @@ const Home = () => {
             }
     }
     
+    console.log(data.listdata);
+
     const icons = () => {
         const id = data.icon_id
         // console.log(id)
@@ -94,6 +97,7 @@ const Home = () => {
 
     useEffect(() => {
         getWeather()
+        // eslint-disable-next-line
     }, [])
 
     // 1882749

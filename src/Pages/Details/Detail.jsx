@@ -18,7 +18,7 @@ const Detail = () => {
     
   const detailWeaters = async () => {
       setLoading(true)
-        console.log(id)
+        // console.log(id)
         await axios.get(`http://api.openweathermap.org/data/2.5/group?id=${id}&appid=284d0c8d3f216bf0622500d1663147e7`).then((response) => {
             const data = response.data.list[0]
             setData({
@@ -38,7 +38,7 @@ const Detail = () => {
     }
 
 
-    console.log(data)
+    // console.log(data)
     const back = () => {
             history.replace("/")
     }
@@ -120,7 +120,8 @@ const Detail = () => {
   </div>
 
     useEffect(() => {
-        detailWeaters()
+      detailWeaters()
+      // eslint-disable-next-line
     }, [id])
     return (
         <div style={{textAlign: "center"}}>

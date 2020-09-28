@@ -44,6 +44,9 @@ body {
 .list {
     font-size: 20px;
 }
+.list:hover {
+   cursor: pointer;
+}
 .list-city {
     text-align: left;
     text-indent: 10px;
